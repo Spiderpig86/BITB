@@ -1,0 +1,175 @@
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'), local('Roboto-Light'), local('DroidSans'),
+        local('Tahoma'), local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light');
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: normal !important;
+    line-height: initial !important;
+    font-family: "system" !important;
+}
+
+#title-bar {
+    height: 31px;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+#logo {
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+#logo-description {
+    color: white;
+    font-size: 12px;
+    font-family: Segoe UI;
+    vertical-align: middle;
+}
+
+#minimize {
+    color: white;
+    font-size: 12px;
+    padding: 9px 15px 7px 15px;
+}
+
+#square {
+    color: white;
+    font-size: 22px;
+    padding: 0px 15px 5px 15px;
+}
+
+#exit {
+    color: white;
+    font-size: 15px;
+    padding: 7px 17px 7px 17px;
+}
+
+#url-bar {
+    height: 28px;
+    background-color: #1b1a1a;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-right: 0.5rem;
+}
+
+#url-bar {
+    overflow: hidden;
+}
+
+#ssl-padlock {
+    margin-left: 8px;
+    margin-right: 8px;
+    user-select: none;
+    height: 20px;
+    width: 20px;
+}
+
+#domain-name {
+    color: white;
+    font-size: 14px;
+    font-family: Segoe UI;
+}
+
+#domain-path {
+    color: #9c9898;
+    font-size: 14px;
+    font-family: Segoe UI;
+}
+
+#title-bar-width {
+    width: calc(100% + 2px); /* 2px added to allow for border on iframe */
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+}
+
+#window {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 759px; /* title bar height + content height */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.1s opacity, 0.2s width, 0.2s height;
+    pointer-events: none;
+}
+
+#window.visible {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+#window.enlarged {
+    width: 100%;
+    height: 100%;
+}
+
+.clickme {
+    margin: 25px;
+    width: 80%;
+    min-width: 184px;
+    max-width: 184px;
+    height: 42px;
+    background-color: #fcfcfc;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    cursor: hand;
+    align-self: center;
+    user-select: none;
+    transition: all 400ms ease 0s;
+    display: flex;
+    font-family: 'Roboto';
+}
+
+.clickme .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    user-select: none;
+}
+
+.clickme .icon .svg {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+    user-select: none;
+}
+
+.clickme .btn-text {
+    margin-left: 0.25rem;
+    color: #757575;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-family: Roboto;
+    user-select: none;
+}
