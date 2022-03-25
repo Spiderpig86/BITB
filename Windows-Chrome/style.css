@@ -86,13 +86,13 @@ body {
 #domain-name {
     color: white;
     font-size: 14px;
-    font-family: Segoe UI;
+    font-family: system;
 }
 
 #domain-path {
     color: #9c9898;
     font-size: 14px;
-    font-family: Segoe UI;
+    font-family: system;
 }
 
 #title-bar-width {
@@ -103,6 +103,8 @@ body {
     width: 100%;
     height: 100%;
     border: 1px solid gray;
+    box-sizing: content-box;
+    z-index: -1;
 }
 
 #window {
@@ -112,10 +114,12 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 759px; /* title bar height + content height */
     width: 40%;
+    min-height: 400px;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     opacity: 0;
-    transition: 0.1s opacity, 0.2s width, 0.2s height;
+    transition: 0.1s opacity;
     pointer-events: none;
 }
 
@@ -128,6 +132,63 @@ body {
 #window.enlarged {
     width: 100%;
     height: 100%;
+}
+
+#window .window__resizer-left {
+    z-index: 10;
+    width: 10px;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: e-resize;
+}
+
+#window .window__resizer-right {
+    z-index: 10;
+    width: 10px;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: e-resize;
+}
+
+#window .window__resizer-bottom {
+    z-index: 10;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: n-resize;
+}
+
+#window .window__resizer-bottomLeft {
+    z-index: 10;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: se-resize;
+}
+
+#window .window__resizer-bottomRight {
+    z-index: 10;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: nw-resize;
 }
 
 .clickme {
