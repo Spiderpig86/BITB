@@ -2,8 +2,8 @@
     font-family: system;
     font-style: normal;
     font-weight: 300;
-    src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'), local('Roboto-Light'), local('DroidSans'),
-        local('Tahoma'), local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light');
+    src: local('Segoe UI'), local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'), local('Roboto-Light'), local('DroidSans'),
+        local('Tahoma'), local('.LucidaGrandeUI'), local('Ubuntu Light');
 }
 
 html,
@@ -14,7 +14,7 @@ body {
     padding: 0;
     overflow: hidden;
     letter-spacing: normal !important;
-    line-height: initial !important;
+    line-height: 1.25 !important;
     font-family: "system" !important;
 }
 
@@ -35,7 +35,7 @@ body {
 #logo-description {
     color: white;
     font-size: 12px;
-    font-family: Segoe UI;
+    font-family: "system";
     vertical-align: middle;
 }
 
@@ -43,18 +43,21 @@ body {
     color: white;
     font-size: 12px;
     padding: 9px 15px 7px 15px;
+    font-family: "system";
 }
 
 #square {
     color: white;
     font-size: 22px;
     padding: 0px 15px 5px 15px;
+    font-family: "system";
 }
 
 #exit {
     color: white;
     font-size: 15px;
     padding: 7px 17px 7px 17px;
+    font-family: "system";
 }
 
 #url-bar {
@@ -86,13 +89,13 @@ body {
 #domain-name {
     color: white;
     font-size: 14px;
-    font-family: system;
+    font-family: "system";
 }
 
 #domain-path {
     color: #9c9898;
     font-size: 14px;
-    font-family: system;
+    font-family: "system";
 }
 
 #title-bar-width {
