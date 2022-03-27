@@ -87,6 +87,9 @@ $('#exit').click(function () {
     $('#window').toggleClass('visible');
     $('#content')[0].src = "about:blank";
 });
+$('#minimize').click(function () {
+    $('#window').toggleClass('visible');
+});
 
 function loadWindow() {
     setTimeout(() => {
